@@ -15,7 +15,7 @@ function speakButton(btn){const card=btn.closest('.row,.box,.quiz');const fr=car
 function testVoice(){say("Bonjour. Je voudrais un café, s'il vous plaît.")}
 function toggleRate(){rate=rate===.85?1:.85;document.getElementById('rate').textContent='속도 '+rate+'×'}
 function setExplanationLanguage(lang){
- document.querySelectorAll('[data-ko][data-en]').forEach(el=>el.textContent=el.dataset[lang]);
+ document.querySelectorAll('[data-ko][data-en]').forEach(el=>el.innerHTML=el.dataset[lang]);
  document.querySelectorAll('[data-html-ko][data-html-en]').forEach(el=>el.innerHTML=el.dataset['html'+lang.charAt(0).toUpperCase()+lang.slice(1)]);
  document.getElementById('lang-ko').classList.toggle('active',lang==='ko');
  document.getElementById('lang-en').classList.toggle('active',lang==='en');
